@@ -16,15 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //MARK: PARSE CONFIGURATION
         let configuration = ParseClientConfiguration {
-            $0.applicationId = "PASTE_YOUR_APPLICATION_ID_HERE"
-            $0.clientKey = "PASTE_YOUR_CLIENT_ID_HERE"
-            $0.server = "https://parseapi.back4app.com"
+            
         }
         
         Parse.initialize(with: configuration)
-        
         saveInstallationObject()
-        
         return true
     }
     func saveInstallationObject(){
