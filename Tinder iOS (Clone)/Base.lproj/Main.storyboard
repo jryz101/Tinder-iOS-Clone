@@ -10,6 +10,105 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="pBj-Mk-oFi">
+            <objects>
+                <viewController id="QOI-Qz-Y2g" customClass="ProfileViewController" customModule="Tinder_iOS__Clone_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uSO-em-Zdh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="sTt-5T-dPh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="J0F-EA-7XL">
+                                <rect key="frame" x="50" y="64" width="275" height="275"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="J0F-EA-7XL" secondAttribute="height" multiplier="1:1" id="Qpo-Bv-ry7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select your gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ln7-Oo-ZfM">
+                                <rect key="frame" x="16" y="440" width="145" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="switch left as man right as woman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCT-6y-JaU">
+                                <rect key="frame" x="16" y="469" width="232" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="switch left as man right as woman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YkZ-6H-CrR">
+                                <rect key="frame" x="16" y="556" width="232" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LVQ-Pd-FzM">
+                                <rect key="frame" x="312" y="456" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I am interested in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVk-gW-yYs">
+                                <rect key="frame" x="16" y="527" width="132" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zbb-ax-ZTN">
+                                <rect key="frame" x="312" y="543" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pho-QS-IZv">
+                                <rect key="frame" x="16" y="616" width="343" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Update Profile">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateProfileAction:" destination="QOI-Qz-Y2g" eventType="touchUpInside" id="6ag-SB-xFh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gj-m0-m7V">
+                                <rect key="frame" x="16" y="681" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0n-Mu-BWG">
+                                <rect key="frame" x="16" y="347" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="uploadbutton"/>
+                                <connections>
+                                    <action selector="uploadProfileImageAction:" destination="QOI-Qz-Y2g" eventType="touchUpInside" id="6Xk-Tp-LMm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="J0F-EA-7XL" firstAttribute="top" secondItem="89C-4g-QgX" secondAttribute="top" constant="20" id="3M4-KS-7Dj"/>
+                            <constraint firstItem="J0F-EA-7XL" firstAttribute="leading" secondItem="89C-4g-QgX" secondAttribute="leading" constant="50" id="6NN-0j-DuF"/>
+                            <constraint firstItem="89C-4g-QgX" firstAttribute="trailing" secondItem="J0F-EA-7XL" secondAttribute="trailing" constant="50" id="Xno-w7-yQu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="89C-4g-QgX"/>
+                    </view>
+                    <connections>
+                        <outlet property="errorLabel" destination="7gj-m0-m7V" id="n3v-56-D4m"/>
+                        <outlet property="genderSwitch" destination="LVQ-Pd-FzM" id="hgj-BW-4AM"/>
+                        <outlet property="interestedInSwitch" destination="zbb-ax-ZTN" id="l1k-W3-ht0"/>
+                        <outlet property="profileImage" destination="J0F-EA-7XL" id="DyL-x9-jNy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSq-rt-nbK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1773.5999999999999" y="16.995073891625616"/>
+        </scene>
         <!--Swipe Object View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -47,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1818" y="17"/>
+            <point key="canvasLocation" x="2697" y="17"/>
         </scene>
         <!--Login Signup View Controller-->
         <scene sceneID="Ini-36-Gam">
@@ -169,6 +268,7 @@
                         <outlet property="passwordTextField" destination="3CJ-TS-cNy" id="7mO-Md-EVD"/>
                         <outlet property="switchSignupLoginButton" destination="dF7-GK-9Ag" id="jvR-N1-EHc"/>
                         <outlet property="usernameTextField" destination="eCD-dQ-bQf" id="WOb-P2-kGx"/>
+                        <segue destination="QOI-Qz-Y2g" kind="presentation" identifier="PopToProfileViewSegue" id="fSl-Jl-Cb4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddW-80-kZr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -178,5 +278,7 @@
     </scenes>
     <resources>
         <image name="background" width="1440" height="3040"/>
+        <image name="uploadbutton" width="64" height="64"/>
+        <image name="user" width="512" height="512"/>
     </resources>
 </document>

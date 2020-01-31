@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		76EB4202B8C9B90125E2620C /* Pods_Tinder_iOS__Clone_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9FEB6A0961AE5CDC2740F5C /* Pods_Tinder_iOS__Clone_.framework */; };
+		8A660FD923E4716F00A0E520 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A660FD823E4716F00A0E520 /* ProfileViewController.swift */; };
 		8AC23A2423DCB4F6005AF29E /* LoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC23A2323DCB4F6005AF29E /* LoginSignupViewController.swift */; };
 		8AD129D923D97F380021B8AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD129D823D97F380021B8AE /* AppDelegate.swift */; };
 		8AD129DB23D97F380021B8AE /* SwipeObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD129DA23D97F380021B8AE /* SwipeObjectViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A660FD823E4716F00A0E520 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8AC23A2323DCB4F6005AF29E /* LoginSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupViewController.swift; sourceTree = "<group>"; };
 		8AD129D523D97F380021B8AE /* Tinder iOS (Clone).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinder iOS (Clone).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD129D823D97F380021B8AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			children = (
 				8AD129D823D97F380021B8AE /* AppDelegate.swift */,
 				8AC23A2323DCB4F6005AF29E /* LoginSignupViewController.swift */,
+				8A660FD823E4716F00A0E520 /* ProfileViewController.swift */,
 				8AD129DA23D97F380021B8AE /* SwipeObjectViewController.swift */,
 				8AD129DC23D97F380021B8AE /* Main.storyboard */,
 				8AD129DF23D97F3B0021B8AE /* Assets.xcassets */,
@@ -208,6 +211,7 @@
 			files = (
 				8AD129DB23D97F380021B8AE /* SwipeObjectViewController.swift in Sources */,
 				8AC23A2423DCB4F6005AF29E /* LoginSignupViewController.swift in Sources */,
+				8A660FD923E4716F00A0E520 /* ProfileViewController.swift in Sources */,
 				8AD129D923D97F380021B8AE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

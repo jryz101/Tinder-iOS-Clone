@@ -58,6 +58,7 @@ class LoginSignupViewController: UIViewController {
                     self.errorLabel.text = errorMessage
                 }else{
                     print("Signup Successful")
+                    self.performSegue(withIdentifier: "PopToProfileViewSegue", sender: self)
                 }
             }
         }else{
@@ -77,12 +78,22 @@ class LoginSignupViewController: UIViewController {
                             self.errorLabel.text = errorMessage
                         }else{
                             print("Login Successful")
+                            self.performSegue(withIdentifier: "PopToProfileViewSegue", sender: self)
                         }
                     }
                 }
             }
         }
     }
+    override func viewDidAppear(_ animated: Bool) {
+        if PFUser.current() != nil {
+            self.performSegue(withIdentifier: "PopToProfileViewSegue", sender: self)
+        }
+    }
+    
+    
+    
+    
     
     
     //MARK: SWITCH LOGIN SIGNUP ACTION BLOCK
