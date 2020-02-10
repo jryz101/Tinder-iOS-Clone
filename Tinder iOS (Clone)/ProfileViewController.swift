@@ -46,6 +46,35 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
         }
     }
     
+    //MARK: CREATE WOMAN DATA FUNCTION BLOCK
+    func createWomanData() {
+        let imageDataUrls = ["https://images.unsplash.com/photo-1490005564410-32c2ff8ada3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80", "https://images.unsplash.com/photo-1524502397800-2eeaad7c3fe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80", "https://images.unsplash.com/photo-1529911194209-8578109840df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80", "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80"]
+        
+        var counter = 0
+        
+        for imageData in imageDataUrls {
+            counter += 1
+            if let url = URL(string: imageData) {
+                if let data = try? Data(contentsOf: url) {
+                    let imageFile = PFFileObject(name: "photo.png", data: data)
+                    
+                    let user = PFUser()
+                    user["photo"] = imageFile
+                    user.username = String(counter)
+                    user.password = "abc123"
+                    user["isFemale"] = true
+                    user["isInterestedInWoman"] = false
+                    
+                    user.signUpInBackground { (success, error) in
+                        if success {
+                            print("Woman Data Created!")
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
     
     
     //MARK: UPLOAD PROFILE IMAGE ACTION BLOCK
@@ -96,6 +125,9 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
                         self.errorLabel.text = errorMessage
                     }else{
                         print("Update Successful")
+                        
+                        ////Method that prompt user to swipe view after updated their profile.
+                        self.performSegue(withIdentifier: "PromptToSwipeViewSegue", sender: self)
                     }
                 })
             }

@@ -58,7 +58,7 @@ class LoginSignupViewController: UIViewController {
                     self.errorLabel.text = errorMessage
                 }else{
                     print("Signup Successful")
-                    self.performSegue(withIdentifier: "PopToProfileViewSegue", sender: self)
+                    self.performSegue(withIdentifier: "PromptToProfileViewSegue", sender: self)
                 }
             }
         }else{
@@ -78,16 +78,29 @@ class LoginSignupViewController: UIViewController {
                             self.errorLabel.text = errorMessage
                         }else{
                             print("Login Successful")
-                            self.performSegue(withIdentifier: "PopToProfileViewSegue", sender: self)
+                            
+                            ///Conditional methods that prompt the login user to swipe screen if they updated their profile or else prompt to profile screen if haven't.
+                            if user?["isFemale"] != nil {
+                                self.performSegue(withIdentifier: "UpdatedPromptSwipeViewSegue", sender: self)
+                            }else{
+                                self.performSegue(withIdentifier: "PromptToProfileViewSegue", sender: self)
+                            }
                         }
                     }
                 }
             }
         }
     }
+    //MARK: VIEW DID APPEAR BLOCK
     override func viewDidAppear(_ animated: Bool) {
         if PFUser.current() != nil {
-            self.performSegue(withIdentifier: "PopToProfileViewSegue", sender: self)
+            
+            ///Conditional methods that prompt the login user to swipe screen if they updated their profile or else prompt to profile screen if haven't.
+            if PFUser.current()?["isFemale"] != nil {
+                self.performSegue(withIdentifier: "UpdatedPromptSwipeViewSegue", sender: self)
+            }else{
+                self.performSegue(withIdentifier: "PromptToProfileViewSegue", sender: self)
+            }
         }
     }
     
