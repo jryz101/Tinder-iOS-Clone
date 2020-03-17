@@ -5,9 +5,13 @@
 
 
 import UIKit
+import Parse
 
 class ChatTableViewCell: UITableViewCell {
-
+    
+    
+    var recipientObjectId = ""
+    
     ///properties outlet
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var messageLabel: UILabel!
@@ -21,6 +25,14 @@ class ChatTableViewCell: UITableViewCell {
     
     //MARK: SEND BUTTON ACITON
     @IBAction func sendButton(_ sender: Any) {
+        ///Methods that use to send message.
+        let message = PFObject(className: "Message")
+        
+        message["sender"] = PFUser.current()?.objectId
+        message["recipient"] = recipientObjectId
+        message["content"] = messageTextField.text
+        
+        message.saveInBackground()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
