@@ -20,11 +20,19 @@ class SwipeObjectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateProfileImage()
-        
         ///A concrete subclass of UIGestureRecognizer that looks for panning (dragging) gestures.
         let gesture = UIPanGestureRecognizer(target: self, action: #selector(draggedFunction(gestureRecognizer:)))
             matchImageView.addGestureRecognizer(gesture)
+        
+        updateProfileImage()
+        
+        ////PFGeoPoint - Methods that get the current user location, and unwrap it to save to the current user.
+        PFGeoPoint.geoPointForCurrentLocation { (geoPoint, error) in
+            if let point = geoPoint {
+                PFUser.current()?["location"] = point
+                PFUser.current()?.saveInBackground()
+            }
+        }
     }
     
     
@@ -113,6 +121,13 @@ class SwipeObjectViewController: UIViewController {
                 ignoreUsers += rejectedUsers
             }
             query.whereKey("objectId", notContainedIn: ignoreUsers)
+            
+            
+            ///Methods that retrieve current user location for a particular user in that location.
+            if let geoPoint = PFUser.current()?["location"] as? PFGeoPoint {
+                query.whereKey("location", withinGeoBoxFromSouthwest: PFGeoPoint(latitude: geoPoint.latitude - 1, longitude: geoPoint.longitude - 1), toNortheast: PFGeoPoint(latitude: geoPoint.latitude + 1, longitude: geoPoint.longitude + 1))
+            }
+            
             
             query.limit = 1
             

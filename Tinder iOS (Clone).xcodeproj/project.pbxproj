@@ -15,6 +15,8 @@
 		8AD129DE23D97F380021B8AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD129DC23D97F380021B8AE /* Main.storyboard */; };
 		8AD129E023D97F3B0021B8AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD129DF23D97F3B0021B8AE /* Assets.xcassets */; };
 		8AD129E323D97F3B0021B8AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD129E123D97F3B0021B8AE /* LaunchScreen.storyboard */; };
+		8AEA19DF242101F900942D24 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEA19DE242101F900942D24 /* ChatTableViewCell.swift */; };
+		8AFC20D0241127290018EB20 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFC20CF241127290018EB20 /* MatchesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		8AD129DF23D97F3B0021B8AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AD129E223D97F3B0021B8AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8AD129E423D97F3B0021B8AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AEA19DE242101F900942D24 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		8AFC20CF241127290018EB20 /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		9B45A275D483199444B6B7F1 /* Pods-Tinder iOS (Clone).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder iOS (Clone).debug.xcconfig"; path = "Target Support Files/Pods-Tinder iOS (Clone)/Pods-Tinder iOS (Clone).debug.xcconfig"; sourceTree = "<group>"; };
 		A9FEB6A0961AE5CDC2740F5C /* Pods_Tinder_iOS__Clone_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinder_iOS__Clone_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE32E804DE715D23322C740 /* Pods-Tinder iOS (Clone).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder iOS (Clone).release.xcconfig"; path = "Target Support Files/Pods-Tinder iOS (Clone)/Pods-Tinder iOS (Clone).release.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				8AC23A2323DCB4F6005AF29E /* LoginSignupViewController.swift */,
 				8A660FD823E4716F00A0E520 /* ProfileViewController.swift */,
 				8AD129DA23D97F380021B8AE /* SwipeObjectViewController.swift */,
+				8AFC20CF241127290018EB20 /* MatchesViewController.swift */,
+				8AEA19DE242101F900942D24 /* ChatTableViewCell.swift */,
 				8AD129DC23D97F380021B8AE /* Main.storyboard */,
 				8AD129DF23D97F3B0021B8AE /* Assets.xcassets */,
 				8AD129E123D97F3B0021B8AE /* LaunchScreen.storyboard */,
@@ -211,6 +217,8 @@
 			files = (
 				8AD129DB23D97F380021B8AE /* SwipeObjectViewController.swift in Sources */,
 				8AC23A2423DCB4F6005AF29E /* LoginSignupViewController.swift in Sources */,
+				8AFC20D0241127290018EB20 /* MatchesViewController.swift in Sources */,
+				8AEA19DF242101F900942D24 /* ChatTableViewCell.swift in Sources */,
 				8A660FD923E4716F00A0E520 /* ProfileViewController.swift in Sources */,
 				8AD129D923D97F380021B8AE /* AppDelegate.swift in Sources */,
 			);
